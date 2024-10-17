@@ -21,7 +21,7 @@ async function fetchProxies() {
 // Fetch and validate proxies
 let proxyUrls = await fetchProxies();
 // proxyUrls = await validateProxies(proxyUrls); // Uncomment if you have a validation function
-
+console.log(proxyUrls)
 // Configure proxy settings
 const proxyConfiguration = new ProxyConfiguration({
     proxyUrls,
@@ -42,7 +42,7 @@ async function scrapeData() {
             'Photographs',
         ],
     });
-    const keyword="Group registration for a group of unpublished images"
+    const keyword="Catalog of photographs"
     const filePath = path.join('./', `${keyword}.csv`);
     const writeStream = fs.createWriteStream(filePath,{flags:'a'});
     writer.pipe(writeStream);
@@ -50,10 +50,11 @@ async function scrapeData() {
     const crawler = new PlaywrightCrawler({
         useSessionPool: true,
         sessionPoolOptions: { maxPoolSize: 100 },
+        requestHandlerTimeoutSecs: 1800,
         persistCookiesPerSession: true,
-        //proxyConfiguration, // Uncomment to use proxy rotation
+        proxyConfiguration, // Uncomment to use proxy rotation
         maxRequestRetries: 20,
-        maxConcurrency: 5,
+        maxConcurrency: 100,
         minConcurrency: 1,
         async requestHandler({ page, request, log, proxyInfo }) {
             console.log('Scraping:', request.url);
@@ -142,7 +143,7 @@ async function scrapeData() {
     });
 
     const urls = [];
-    for (let v1 = 1; v1 <= 30; v1++) {
+    for (let v1 = 101; v1 <= 1000; v1++) {
         urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&Search%5FArg=${encodeURI(keyword)}&Search%5FCode=FT%2A&CNT=100&PID=dummy_pid&SEQ=12345678912345&SID=1`);
     }
 
