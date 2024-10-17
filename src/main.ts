@@ -52,9 +52,9 @@ async function scrapeData() {
         sessionPoolOptions: { maxPoolSize: 100 },
         requestHandlerTimeoutSecs: 1800,
         persistCookiesPerSession: true,
-        proxyConfiguration, // Uncomment to use proxy rotation
+        //proxyConfiguration, // Uncomment to use proxy rotation
         maxRequestRetries: 20,
-        maxConcurrency: 100,
+        maxConcurrency: 10,
         minConcurrency: 1,
         async requestHandler({ page, request, log, proxyInfo }) {
             console.log('Scraping:', request.url);
@@ -143,11 +143,13 @@ async function scrapeData() {
     });
 
     const urls = [];
-    for (let v1 = 101; v1 <= 1000; v1++) {
+    for (let v1 = 1; v1 <= 100; v1++) {
         urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&Search%5FArg=${encodeURI(keyword)}&Search%5FCode=FT%2A&CNT=100&PID=dummy_pid&SEQ=12345678912345&SID=1`);
     }
 
     console.log("Generated links:", urls);
+    console.log('Toatal proxies:',proxyUrls.length);
+    console.log('Total links to be scrapped:',urls.length);
     await crawler.run(urls);
 }
 
