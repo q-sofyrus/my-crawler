@@ -144,7 +144,7 @@ async function scrapeData() {
     });
 
     const urls = [];
-    for (let v1 =1; v1 <= 500; v1++) {
+    for (let v1 =500; v1 >= 1; v1--) {
         
             urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);           urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
             urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
