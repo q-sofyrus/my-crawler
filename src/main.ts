@@ -4,7 +4,7 @@ import { PlaywrightCrawler, ProxyConfiguration } from 'crawlee';
 import * as fs from 'fs';
 import * as path from 'path';
 import csvWriter from 'csv-write-stream';
-
+ 
 // Function to fetch proxies from a specified URL
 async function fetchProxies() {
     const githubUrl = 'https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt';
@@ -12,7 +12,7 @@ async function fetchProxies() {
         const response = await axios.get(githubUrl);
         const ipArray = response.data.split('\n').filter((proxy: string) => proxy.trim() !== '');
         return ipArray.map((ip: any) => `http://${ip}`);
-    } catch (error) {
+    } catch (error:any) {
         console.error(`Failed to fetch proxy list: ${error.message}`);
         return [];
     }
@@ -42,8 +42,8 @@ async function scrapeData() {
             'Photographs',
         ],
     });
-    const keyword="Catalog of photographs"
-    const filePath = path.join('./', `${keyword}.csv`);
+     
+    const filePath = path.join(`17-12-2024.csv`);
     const writeStream = fs.createWriteStream(filePath,{flags:'a'});
     writer.pipe(writeStream);
 
@@ -52,21 +52,21 @@ async function scrapeData() {
         sessionPoolOptions: { maxPoolSize: 100 },
         requestHandlerTimeoutSecs: 1800,
         persistCookiesPerSession: true,
-        //proxyConfiguration, // Uncomment to use proxy rotation
-        maxRequestRetries: 20,
-        maxConcurrency: 10,
+        proxyConfiguration, // Uncomment to use proxy rotation
+        maxRequestRetries: 100,
+        maxConcurrency: 100,
         minConcurrency: 1,
         async requestHandler({ page, request, log, proxyInfo }) {
             console.log('Scraping:', request.url);
             console.log("Using proxy:", proxyInfo?.url || 'No proxy');
 
             try {
-                await page.goto(request.url, { timeout: 120000 });
+                await page.goto(request.url, { waitUntil:'load'});
             } catch (error:any) {
                 console.error(`Failed to navigate to ${request.url}. Error: ${error.message}`);
                 throw error;
             }
-
+            page
             const name = await getTextContent(page, 'th:has-text("Name") + td');
             const rightsAndPermissions = await getTextContent(page, 'th:has-text("Rights and Permissions") + td');
             const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
@@ -111,6 +111,7 @@ async function scrapeData() {
             });
 
             // Write extracted data to CSV
+           //console.log("page title: " ,await page.title())
             writer.write({
                 'Name(s)': name,
                 'Email': email,
@@ -143,11 +144,43 @@ async function scrapeData() {
     });
 
     const urls = [];
-    for (let v1 = 1; v1 <= 100; v1++) {
-        urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&Search%5FArg=${encodeURI(keyword)}&Search%5FCode=FT%2A&CNT=100&PID=dummy_pid&SEQ=12345678912345&SID=1`);
+    for (let v1 =1; v1 <= 500; v1++) {
+        
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);           urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20photo&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20unpublished%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20published%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20published%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20unpublished%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20published%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20unpublished%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20visual%20material&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Individual%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Miscellaneous%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20assignments&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20published&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20registration&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20submission&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20collection&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20work&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20works&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q1%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q2%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q3%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q4%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Registrations&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Unpublished%20works&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Visual%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);
+            urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Visual%20material&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1`);        
     }
 
-    console.log("Generated links:", urls);
+    
     console.log('Toatal proxies:',proxyUrls.length);
     console.log('Total links to be scrapped:',urls.length);
     await crawler.run(urls);

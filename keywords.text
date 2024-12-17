@@ -1,13 +1,13 @@
 Assignments
 Batch
-Catalog of photographs
-Collection of photographs
-Collection of photos
-Collection of published photos
-Collection of unpublished photos
-Copyright registration for a group of published photographs
-Copyright registration for a group of unpublished photographs
-Groups of commercial images
+Catalog of photographs   -done
+Collection of photographs  -done
+Collection of photos        -done
+Collection of published photos  -done
+Collection of unpublished photos  -done
+Copyright registration for a group of published photographs  -done
+Copyright registration for a group of unpublished photographs -done
+< Groups of commercial images
 Groups of commercial photographs
 Groups of commercial photos
 Group registration
@@ -16,11 +16,11 @@ Group registration photos
 Group registration of unpublished images
 Group registration of published images
 Group registration of published photos
-Group registration of published photographs
-Group registration for a group of published photographs
-Group registration of unpublished images
-Group registration for a group of unpublished images
-Group registration photos
+Group registration of published photographs  >
+Group registration for a group of published photographs  -done
+Group registration of unpublished images   -done
+Group registration for a group of unpublished images   -done
+<  Group registration photos
 Groups of published photos
 Groups of published photographs
 Groups of published photographs
@@ -31,10 +31,10 @@ Miscellaneous published photographs
 Photo assignments
 Photo published
 Photo registration
-Photo submission
-Photograph registration
-Photographs
-Published collection
+Photo submission      
+Photograph registration  
+Photographs             
+<Published collection
 Published images
 Published work
 Published works
@@ -48,4 +48,78 @@ Visual images
 Visual material
 
 
-twilio recovery H9KAJLQ2LMD7LRVYNZJGEK23
+
+linkes
+
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20photo&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20unpublished%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20published%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20published%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20unpublished%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20published%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20unpublished%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20visual%20material&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Individual%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Miscellaneous%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20assignments&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20published&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20registration&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20submission&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20collection&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20work&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20works&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q1%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q2%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q3%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q4%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Registrations&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Unpublished%20works&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Visual%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Visual%20material&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1
+
+
+
+
+const urls = [
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20commercial%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20photo&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20unpublished%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20published%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20published%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Group%20registration%20of%20unpublished%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20published%20photos&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20unpublished%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Groups%20of%20visual%20material&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Individual%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Miscellaneous%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20assignments&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20published&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20registration&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Photo%20submission&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20collection&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20work&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Published%20works&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q1%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q2%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q3%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Q4%20published%20photographs&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Registrations&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Unpublished%20works&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Visual%20images&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1",
+    "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&SEQ=12345698725439&Search%5FArg=Visual%20material&Search%5FCode=FT%2A&CNT=25&PID=dummy_pid&SID=1"
+];

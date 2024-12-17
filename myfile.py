@@ -1,60 +1,61 @@
-import os
+import pandas as pd
 
-# List of folder names
-folder_names = [
-    "Assignments",
-    "Batch",
-    "Catalog of photographs",
-    "Collection of photographs",
-    "Collection of photos",
-    "Collection of published photos",
-    "Collection of unpublished photos",
-    "Copyright registration for a group of published photographs",
-    "Copyright registration for a group of unpublished photographs",
-    "Groups of commercial images",
-    "Groups of commercial photographs",
-    "Groups of commercial photos",
-    "Group registration",
-    "Group registration photo",
-    "Group registration photos",
-    "Group registration of unpublished images",
-    "Group registration of published images",
-    "Group registration of published photos",
-    "Group registration of published photographs",
-    "Group registration for a group of published photographs",
-    "Group registration of unpublished images",
-    "Group registration for a group of unpublished images",
-    "Group registration photos",
-    "Groups of published photos",
-    "Groups of published photographs",
-    "Groups of unpublished photographs",
-    "Groups of visual material",
-    "Individual photographs",
-    "Miscellaneous published photographs",
-    "Photo assignments",
-    "Photo published",
-    "Photo registration",
-    "Photo submission",
-    "Photograph registration",
-    "Photographs",
-    "Published collection",
-    "Published images",
-    "Published work",
-    "Published works",
-    "Q1 published photographs",
-    "Q2 published photographs",
-    "Q3 published photographs",
-    "Q4 published photographs",
-    "Registrations",
-    "Unpublished works",
-    "Visual images",
-    "Visual material"
-]
+# Load the CSV file
+csv_file_path = 'cleaned_file.csv'  # Update this with the path to your CSV file
+df = pd.read_csv(csv_file_path)
 
-# Create folders
-for folder in folder_names:
-    try:
-        os.makedirs(folder, exist_ok=True)
-        print(f"Folder created: {folder}")
-    except Exception as e:
-        print(f"Error creating folder {folder}: {e}")
+# Check for duplicate rows
+print(f"Original number of rows: {df.shape[0]}")
+duplicates = df[df.duplicated()]
+# Print the duplicates (if any)
+if not duplicates.empty:
+    print(f"Number of duplicate rows: {len(duplicates)}")
+    print("Duplicate rows:")
+    print(duplicates)
+else:
+    print("No duplicate rows found.")
+
+#df['Date Of Creation'] = pd.to_datetime(df['Date Of Creation'])
+#filtered_records = df[df['Date Of Creation'] < '2010-01-01']
+print(df['Date Of Creation'].head(10))  # Check original values
+
+# Convert the 'Date Of Creation' column, assuming they are years
+df['Date Of Creation'] = pd.to_datetime(df['Date Of Creation'].astype(str), format='%Y', errors='coerce')
+
+# Print the cleaned 'Date Of Creation' column
+print(df['Date Of Creation'])
+
+# Filter records with dates before '2010-01-01'
+#filtered_records = df[df['Date Of Creation'] < '2010-01-01']
+
+# Print filtered records
+#print(filtered_records['Date Of Creation'])
+
+# # Store 'Date Of Creation' column in a separate file
+# date_of_creation = df[['Date Of Creation']]  # Selecting the column
+
+# # Save to a new CSV file
+# date_of_creation.to_csv('date_of_creation.csv', index=False)
+
+# print("Date Of Creation column has been saved to 'date_of_creation.csv'")
+
+# df['Date Of Creation'] = pd.to_datetime(df['Date Of Creation'], errors='coerce')
+# filtered_df = df[df['Date Of Creation'] > '2010-01-01' ]
+# print("\nFiltered rows where  Date Of Creation  gt 50:")
+# print(filtered_df)
+# filtered_df.to_csv('C:/Users/Moon Computers/Desktop/my-crawler/keyword_data/Catalog of photographs/data.csv', index=False)
+
+# import pandas as pd
+
+# # Load the CSV file
+# file_path = 'usco_data_25-11-2024.csv'  # Replace with your file path
+# df = pd.read_csv(file_path)
+
+# # Remove duplicates
+# df_no_duplicates = df.drop_duplicates()
+
+# # Save the cleaned DataFrame to a new CSV file
+# output_file_path = 'cleaned_file.csv'  # You can change the output file name
+# df_no_duplicates.to_csv(output_file_path, index=False)
+
+# print("Duplicates removed and saved to:", output_file_path)
